@@ -11,6 +11,19 @@
    <tr>
      <td>Naam: </td>
    <td>{{$band->name}}</td>
+   <td>
+ <button type="submit"><a href="{{ route('bands.edit',$band->id)}}"
+class="btn btn-primary">Aanpassen</a> </button>
+ </td>
+ <td>
+<form action="{{ route('bands.destroy', $band->id)}}"
+method="post">
+@method('DELETE')
+@csrf
+&nbsp;
+<button class="btn btn-danger" type="submit">Verwijderen</button>
+</form>
+</td>
  </tr>
  <tr>
    <td>Omschrijving: </td>

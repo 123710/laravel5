@@ -3,7 +3,7 @@
 @section('content')
 <div class="container">
 
-
+<a href="{{ route('band.create')}}"class="btn btn-primary">Nieuw</a>
   <div class="row">
     <div class="col-sm-12">
       <h1 class="display-3">Bands</h1>

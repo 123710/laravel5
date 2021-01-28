@@ -17,6 +17,8 @@ class CreateBandsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('describe');
+            $table->string('file_path');
+            $table->string('url');
             $table->timestamps();
         });
     }

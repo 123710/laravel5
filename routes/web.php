@@ -2,6 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\BandController;
+use App\Http\Controllers\SearchController;
+use App\Http\Controllers\AdminController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,15 +17,25 @@ use App\Http\Controllers\BandController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', [BandController::class, 'showbands'])->name('show.bands');
+Route::get('/zoeken', [SearchController::class, 'showSearchResults'])->name('search.results');
+
+
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-Route::resource('bands', 'App\Http\Controllers\BandController');
 
-Auth::routes();
+Route::resource('bands', 'App\Http\Controllers\AdminController');
+Route::get('/video', [BandController::class, 'video'])->name('video');
+Route::get('/nieuw', [AdminController::class, 'create'])->name('band.create');
+Route::post('/nieuw', [AdminController::class, 'store'])->name('band.store');
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+  Route::prefix('bands')->group(function() {
+
+    Route::group(['prefix' => '/{band}'], function (){
+      Route::put('/update',[AdminController::class,'update'])->name('bands.update');
+        Route::get('/edit',[AdminController::class,'edit'])->name('bands.edit');
+        Route::delete('/delete',[AdminController::class,'destroy'])->name('bands.delete');
+    });
+  });

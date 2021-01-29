@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<body 	style=" background-color:#2694ab;">
+<div  style=" background-color: 		#e59572;" class="container">
 
 <a href="{{ route('band.create')}}"class="btn btn-primary">Nieuw</a>
   <div class="row">
@@ -19,5 +20,6 @@
   </div>
   </div>
 </div>
+</body>
 
 @endsection

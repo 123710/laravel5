@@ -1,10 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<body 	style=" background-color:	#fdc4b6	;">
+
+<div style=" background-color:		#ea7070;" class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card">
+            <div style=" background-color:	#e59572;" class="card">
                 <div class="card-header">{{ __('Register') }}</div>
 
                 <div class="card-body">
@@ -74,4 +76,5 @@
         </div>
     </div>
 </div>
+</body>
 @endsection

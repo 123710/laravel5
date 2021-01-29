@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<body  	style=" background-color:#2694ab;">
+
+<div  	style=" background-color:coral;" class="container">
 
 
   <div class="row">
@@ -33,5 +35,6 @@ method="post">
   </div>
   </div>
 </div>
+</body>
 
 @endsection

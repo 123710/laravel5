@@ -51,9 +51,9 @@
          </div>
          <div >
              <div style=" background-color: #4dbedf;"  class="uk-card-body">
-                 <h3  class="uk-card-title">{{ $band->name }}</h3>
+                 <h3  class="uk-card-title"><b>{{ $band->name }}</b></h3>
                  <p  class="uk-text-meta uk-margin-remove-top"><time datetime="1">datum</time></p>
-                 <p >{{ $band->describe }}</p>
+                 <p ><b>{{ $band->describe }}</b></p>
              </div>
              <div style=" background-color: #fdc4b6;" class="uk-card-footer">
                  <a style=" background-color: #fdc4b6;" href="{{route('video')}}" class="uk-button uk-button-text uk-align-right">bekijken</a>

@@ -15,10 +15,10 @@
         }
     </style>
 </head>
-<body>
+<body  style=" background-color:#fdc4b6" >
 <!-- if validation in the controller fails, show the errors -->
 @if ($errors->any())
-   <div class="alert alert-danger">
+   <div  class="alert alert-danger">
      <ul>
      @foreach ($errors->all() as $error)
         <li>{{ $error }}</li>
@@ -32,28 +32,28 @@
 <form action="{{ route('band.store') }}" method="post" enctype="multipart/form-data">
         <!-- Add CSRF Token -->
         @csrf
-    <div class="form-group">
+    <div style=" background-color:	#ea7070" class="form-group">
         <label for="name">band Name</label>
         <input type="text" class="form-control" name="name" required>
     </div>
 
-    <div class="uk-margin">
+    <div  style=" background-color:#e59572" class="uk-margin">
         <label class="uk-form-label" for="describe">Beschrijven</label>
         <div class="uk-margin">
             <textarea class="uk-textarea" name="describe" rows="5" placeholder="Beschrijven">{{ old('describe', isset($band->describe) ? $band->describe : null) }}</textarea>
         </div>
     </div>
 
-    <div class="form-group">
+    <div  style=" background-color:#2694ab" class="form-group">
         <label for="url">video URL</label>
         <input type="text" class="form-control" name="url" required>
     </div>
 
 
-    <div class="form-group">
+    <div  style=" background-color:#4dbedf" class="form-group">
         <input type="file" name="file" required>
     </div>
-    <button type="submit">Submit</button>
+    <button  type="submit">Submit</button>
 </form>
 
 </div>

@@ -1,6 +1,8 @@
   @extends('layouts.app')
   @section('content')
-    <div class="row">
+  <body style=" background-color:#fdc4b6">
+
+    <div style=" background-color:#2694ab" class="row">
     <div class="col-sm-8 offset-sm-2">
     <h1 class="display-3">band aanpassen</h1>
   @if ($errors->any())
@@ -34,4 +36,5 @@
   </form>
   </div>
   </div>
+</body>
 @endsection

@@ -40,4 +40,15 @@ class BandController extends Controller
       return view('dashboard.video', compact('bands'));
     }
 
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function bandvideo(Band $band)
+    {
+      return view('band.video', compact('band'));
+    }
+
 }

@@ -5,17 +5,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Band extends Model
+class BandMember extends Model
 {
     use HasFactory;
     protected $fillable = [
-      'name', 'describe','file_path','url'
+      'name', 'band_id'
     ];
 
-    public function members()
+    public function band()
     {
-      return $this->hasMany('App\Models\BandMember');
+      return $this->belongsTo('App\Models\Band');
     }
-
 
 }

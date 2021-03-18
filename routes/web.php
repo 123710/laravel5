@@ -28,6 +28,7 @@ Auth::routes();
 
 Route::resource('bands', 'App\Http\Controllers\AdminController');
 Route::get('/video', [BandController::class, 'video'])->name('video');
+Route::get('/{band}/video', [BandController::class, 'bandvideo'])->name('band.video');
 Route::get('/nieuw', [AdminController::class, 'create'])->name('band.create');
 Route::post('/nieuw', [AdminController::class, 'store'])->name('band.store');
 

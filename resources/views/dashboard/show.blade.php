@@ -56,7 +56,7 @@
                  <p ><b>{{ $band->describe }}</b></p>
              </div>
              <div style=" background-color: #fdc4b6;" class="uk-card-footer">
-                 <a style=" background-color: #fdc4b6;" href="{{route('video')}}" class="uk-button uk-button-text uk-align-right">bekijken</a>
+                 <a style=" background-color: #fdc4b6; " href="{{ route('band.video',  ['band' => $band->id]) }}" class="uk-button uk-button-text uk-align-right">bekijken</a>
              </div>
          </div>
      </div>
